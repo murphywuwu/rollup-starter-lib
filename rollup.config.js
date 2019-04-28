@@ -1,5 +1,5 @@
 import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+// import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
 
 export default [
@@ -12,9 +12,9 @@ export default [
 			format: 'umd'
 		},
 		plugins: [
-			resolve(), // so Rollup can find `ms`
-			commonjs() // so Rollup can convert `ms` to an ES module
-		]
+			// resolve(), // so Rollup can find `ms`
+		// 	commonjs() // so Rollup can convert `ms` to an ES module
+    ],
 	},
 
 	// CommonJS (for Node) and ES module (for bundlers) build.
