@@ -11,10 +11,11 @@ export default [
 			file: pkg.browser,
 			format: 'umd'
 		},
-		plugins: [
-			resolve(), // so Rollup can find `ms`
+		// plugins: [
+			// resolve(), // so Rollup can find `ms`
 			// commonjs() // so Rollup can convert `ms` to an ES module
-    ],
+    // ],
+    external: ['the-answer'],
 	},
 
 	// CommonJS (for Node) and ES module (for bundlers) build.
