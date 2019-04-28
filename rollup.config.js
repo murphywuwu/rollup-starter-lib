@@ -1,5 +1,5 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+// import resolve from 'rollup-plugin-node-resolve';
+// import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
 
 export default [
@@ -9,7 +9,10 @@ export default [
 		output: {
 			name: 'howLongUntilLunchTime',
 			file: pkg.browser,
-			format: 'umd'
+      format: 'umd',
+      globals: {
+        'the-answer': 'answer'
+      },
 		},
 		// plugins: [
 			// resolve(), // so Rollup can find `ms`
